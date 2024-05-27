@@ -1,0 +1,52 @@
+{
+  "name": "@tpstech/ecowitt-api",
+  "displayName": "Ecowitt API Poller",
+  "version": "0.0.1",
+  "description": "Simple app to establish a postgres database and poll the ecowitt.net API for weather data from your compatible weather station's uploads.",
+  "keywords": [
+    "ecowitt",
+    "weather",
+    "api",
+    "postgres",
+    "database"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsdevau/xlsx-xero"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "tsdevau",
+    "email": "github@tsdev.au",
+    "url": "https://tsdev.au/ecowitt-api"
+  },
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "bl": "tsc --build && pnpm link -g",
+    "build": "tsc --build",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "lint": "eslint --ext .js,.ts .",
+    "test": "pnpm vitest"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "axios-retry": "^4.3.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "drizzle-kit": "^0.21.4",
+    "eslint": "^9.3.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
